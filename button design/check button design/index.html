@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hero">
+        <button id="btn">
+            <p id="btnText">submit</p>
+            <div class="check-box">
+                <!-- svg code for tick in check-box -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+              <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+            </div>
+        </button>
+    </div>
+
+    <!-- to change the text submit to thanks -->
+    <script>
+         var btn=document.getElementById("btn");
+         var btnText =document.getElementById("btnText");
+
+         btn.onclick = function(){
+             btnText.innerHTML = "Thanks";
+             btn.classList.add("active");
+         }
+    </script>
+</body>
+</html>
