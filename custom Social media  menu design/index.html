@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="selector">
+            <div id="selectField">
+                <p id="selectText">Select Social Media</p>
+                <img src="./image/logo.png" alt="">
+            </div>
+                <ul id="list" class="hide">
+                    <li class="options">
+                        <img src="./image/Facebook-logo.png" alt="">
+                        <p>Facebook</p>
+                    </li>
+                    <li class="options">
+                        <img src="./image/twitter logo.jpg" alt="">
+                        <p>Twitter</p>
+                    </li>
+                    <li class="options">
+                        <img src="./image/youtube logo.png" alt="">
+                        <p>YouTube</p>
+                    </li>
+                    <li class="options">
+                        <img src="./image/whatsapp logo.png" alt="">
+                        <p>Whatsapp</p>
+                    </li>
+                    <li class="options">
+                        <img src="./image/pinterest.png" alt="">
+                        <p>Pinterest</p>
+                    </li>
+                    <li class="options">
+                        <img src="./image/instagram logo.jpg" alt="">
+                        <p>Instagram</p>
+                    </li>
+                </ul>
+        </div>
+    </div>
+
+    <script>
+        var selectField = document.getElementById("selectField");
+        var selectText = document.getElementById("selectText");
+        var options = document.getElementsByClassName("options");
+        var list = document.getElementById("list");
+        
+        selectField.onclick = function(){
+           list.classList.toggle("hide");
+        }
+        
+        for(option of options){
+            option.onclick = function(){
+                selectText.innerHTML = this.textContent;
+                list.classList.toggle("hide");
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
